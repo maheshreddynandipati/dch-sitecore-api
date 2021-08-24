@@ -1,0 +1,30 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  query:
+    type: string
+  skip:
+    type: number
+  take:
+    type: number
+  totalItemCount: 
+    type: number
+  returnedItemCount:
+    type: number
+  sorting:
+    type: object
+    properties:
+      name:
+        type: string
+      labels:
+        type: object
+      asc:
+        type: boolean
+  sortingOptions:
+    type: array
+  filters:
+    type: array
+    items:
+      type: ibject
+      properties:      
+

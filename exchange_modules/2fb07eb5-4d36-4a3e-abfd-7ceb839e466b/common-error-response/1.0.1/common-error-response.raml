@@ -1,0 +1,49 @@
+#%RAML 1.0 Trait
+    headers-Traits:
+     correlationId: 65189d64-019c-11eb-adc1-0242ac120002
+     x-auth-token:
+      type: string
+     example:
+      sdgacxzxbcz457
+     minLength: 5
+     maxLength: 10
+     content-type:
+     - application/json
+    common-errorResponses:
+     400:
+      description: Output is response code of Bad Request
+      body:
+       example: !include/common-errors/400.raml
+    401:
+     description: Output is response code of Unauthorized error
+     body:
+       example: !include/common-errors/401.raml
+    404:
+     description: Requested resource not found
+     body:
+       example: !include/common-errors/404.raml
+    405:
+      description: Method Not Allowed
+      body:
+       example: !include/common-errors/405.raml
+    415:
+     description: Unsupported Media Type
+     body:
+       example: !include/common-errors/415.raml    
+    422:
+     description: Output is response code of Unprocessable Entity
+     body:
+       example: !include/common-errors/422.raml
+    500:
+     description: Output is response code of Internal Server Error
+     body:
+       example: !include/common-errors/500.raml
+    503:
+     description: The Service is Unavailable 
+     body:
+       example: !include/common-errors/503.raml
+    504:
+     description: Gateway Timeout 
+     body:
+      example: !include/common-errors/504-example.raml
+        
